@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <title>Bradley's Recipes</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="kicker">Kitchen pocket book</p>
+      <h1>Bradley's Recipes</h1>
+    </div>
+    <button id="themeBtn" class="round" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="searchBox">
+      <button id="searchToggle" class="primary" type="button" aria-expanded="false">Search recipes</button>
+      <div id="searchPanel" hidden>
+        <input id="search" type="search" placeholder="Search chicken, cream, 75c, 3 days…" autocomplete="off" />
+      </div>
+      <div id="chips" class="chips"></div>
+    </section>
+
+    <section class="notes">
+      <details>
+        <summary>Quick ratios & shift notes</summary>
+        <p><b>Mise en place:</b> measure ingredients first, especially desserts.</p>
+        <p><b>Fish batter:</b> plain flour, soda, beer — 1:1:1, salt. Optional lemon + malt vinegar.</p>
+        <p><b>Yorkshire:</b> plain flour, eggs, milk — 1:1:1. Hot oil, 195°C, 18 mins.</p>
+        <p><b>Dressing:</b> 3 parts oil, 1 part sweetener, 1 part mustard, 1 part vinegar.</p>
+        <p><b>Chicken:</b> cook to at least 75°C.</p>
+      </details>
+    </section>
+
+    <div class="countRow">
+      <span id="count"></span>
+      <button id="collapseAll" type="button">Collapse all</button>
+    </div>
+
+    <section id="list" class="cards"></section>
+  </main>
+
+  <footer>Door codes intentionally excluded. Keep anything sensitive out of GitHub Pages.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
