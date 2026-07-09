@@ -1,0 +1,9 @@
+{
+  "name": "Bradley's Recipes",
+  "short_name": "Recipes",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#10131a",
+  "theme_color": "#12161f",
+  "icons": []
+}
