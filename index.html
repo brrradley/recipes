@@ -8,7 +8,7 @@
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .body{white-space:normal}.recipe-section{margin:.2rem 0 1rem}.recipe-section:last-child{margin-bottom:0}.recipe-section ul{margin:.2rem 0 0;padding-left:1.2rem}.recipe-section li{margin:.35rem 0}.method-copy{display:grid;gap:.7rem}.method-copy p{margin:0}.body h3{margin:.2rem 0 .5rem}.techniques{margin-bottom:1rem}.techniques details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}.techniques summary{cursor:pointer;padding:1rem;font-weight:900}.technique-body{padding:0 1rem 1rem}.technique-body h3{margin:.2rem 0 .6rem;color:var(--accent);font-size:1rem}.technique-body ul{margin:.2rem 0 1rem;padding-left:1.2rem}.technique-body li{margin:.35rem 0}.technique-body p{margin:.45rem 0;color:var(--muted)}
+    .body{white-space:normal}.recipe-section{margin:.2rem 0 1rem}.recipe-section:last-child{margin-bottom:0}.recipe-section ul{margin:.2rem 0 0;padding-left:1.2rem}.recipe-section li{margin:.35rem 0}.method-copy{display:grid;gap:.7rem}.method-copy p{margin:0}.body h3{margin:.2rem 0 .5rem}
   </style>
 </head>
 <body>
@@ -24,7 +24,7 @@
     <section class="searchBox">
       <button id="searchToggle" class="primary" type="button" aria-expanded="false">Search recipes</button>
       <div id="searchPanel" hidden>
-        <input id="search" type="search" placeholder="Search chicken, cream, 75c, 3 days…" autocomplete="off" />
+        <input id="search" type="search" placeholder="Search chicken, cream, asparagus, 75c…" autocomplete="off" />
       </div>
       <div id="chips" class="chips"></div>
     </section>
@@ -40,23 +40,6 @@
       </details>
     </section>
 
-    <section class="techniques">
-      <details>
-        <summary>Techniques</summary>
-        <div class="technique-body">
-          <h3>Asparagus prep</h3>
-          <ul>
-            <li>Snap the bottom of the stem rather than cutting it.</li>
-            <li>Trim the tip end neatly if needed.</li>
-            <li>Use a turning knife to shave off the little shards/scales along the stem.</li>
-            <li>Remove any purple bits from the stem.</li>
-          </ul>
-          <p>The likely reason for snapping is that asparagus naturally breaks where the woody lower stem gives way to the tender spear.</p>
-          <p>For soup, keep the snapped root ends for the base/stock stage, then remove, blend or pass depending on the soup method.</p>
-        </div>
-      </details>
-    </section>
-
     <div class="countRow">
       <span id="count"></span>
       <button id="collapseAll" type="button">Collapse all</button>
@@ -66,6 +49,5 @@
   </main>
 
   <script src="script.js"></script>
-  <script src="format-recipes.js"></script>
 </body>
 </html>
