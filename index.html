@@ -3,49 +3,52 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#111827" />
+  <meta name="theme-color" content="#12161f" />
   <title>Bradley's Recipes</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
+  <header class="app-header">
     <div>
-      <p class="kicker">Kitchen pocket book</p>
+      <p class="eyebrow">Kitchen pocket book</p>
       <h1>Bradley's Recipes</h1>
     </div>
-    <button id="themeBtn" class="round" aria-label="Toggle theme">☾</button>
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
   </header>
 
   <main>
-    <section class="searchBox">
-      <button id="searchToggle" class="primary" type="button" aria-expanded="false">Search recipes</button>
-      <div id="searchPanel" hidden>
-        <input id="search" type="search" placeholder="Search chicken, cream, 75c, 3 days…" autocomplete="off" />
+    <section class="toolbar" aria-label="Recipe search and filters">
+      <button id="searchToggle" class="search-toggle" type="button" aria-expanded="false">Search recipes</button>
+      <div id="searchPanel" class="search-panel" hidden>
+        <label for="searchInput">Search by dish, ingredient, note, storage or temperature</label>
+        <input id="searchInput" type="search" placeholder="Try: cream, chicken, 75c, 3 days…" autocomplete="off" />
       </div>
-      <div id="chips" class="chips"></div>
+      <div id="categoryChips" class="chips" role="list" aria-label="Categories"></div>
     </section>
 
-    <section class="notes">
+    <section class="quick-notes">
       <details>
-        <summary>Quick ratios & shift notes</summary>
-        <p><b>Mise en place:</b> measure ingredients first, especially desserts.</p>
-        <p><b>Fish batter:</b> plain flour, soda, beer — 1:1:1, salt. Optional lemon + malt vinegar.</p>
-        <p><b>Yorkshire:</b> plain flour, eggs, milk — 1:1:1. Hot oil, 195°C, 18 mins.</p>
-        <p><b>Dressing:</b> 3 parts oil, 1 part sweetener, 1 part mustard, 1 part vinegar.</p>
-        <p><b>Chicken:</b> cook to at least 75°C.</p>
+        <summary>Quick ratios & notes</summary>
+        <div class="note-grid">
+          <p><strong>Mise en place:</strong> measure ingredients first, especially desserts.</p>
+          <p><strong>Fish batter:</strong> plain flour, soda, beer — 1:1:1, salt. Optional lemon + malt vinegar.</p>
+          <p><strong>Yorkshire:</strong> flour, eggs, milk — 1:1:1. Hot oil, 195°C, 18 mins.</p>
+          <p><strong>Dressing:</strong> 3 parts oil, 1 sweetener, 1 mustard, 1 vinegar.</p>
+          <p><strong>Chicken safety:</strong> cook chicken to at least 75°C.</p>
+          <p><strong>Storage:</strong> follow your venue policy; stored times here are prep notes, not legal advice.</p>
+        </div>
       </details>
     </section>
 
-    <div class="countRow">
-      <span id="count"></span>
+    <section class="results-line">
+      <span id="resultCount"></span>
       <button id="collapseAll" type="button">Collapse all</button>
-    </div>
+    </section>
 
-    <section id="list" class="cards"></section>
+    <section id="recipes" class="recipe-list" aria-live="polite"></section>
   </main>
 
-  <footer>Door codes intentionally excluded. Keep anything sensitive out of GitHub Pages.</footer>
   <script src="script.js"></script>
 </body>
 </html>
