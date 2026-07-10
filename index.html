@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#111827" />
   <title>Bradley's Recipes</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <style>
     .body{white-space:normal}.recipe-section{margin:.2rem 0 1rem}.recipe-section:last-child{margin-bottom:0}.recipe-section ul{margin:.2rem 0 0;padding-left:1.2rem}.recipe-section li{margin:.35rem 0}.method-copy{display:grid;gap:.7rem}.method-copy p{margin:0}.body h3{margin:.2rem 0 .5rem}
   </style>
@@ -48,7 +48,18 @@
     <section id="list" class="cards"></section>
   </main>
 
-  <script src="script.js"></script>
-  <script src="self-notes.js"></script>
+  <script src="script.js?v=4"></script>
+  <script src="self-notes.js?v=2"></script>
+  <script>
+    window.addEventListener('error', function(event) {
+      const list = document.getElementById('list');
+      const count = document.getElementById('count');
+      if (list && !list.children.length) {
+        if (count) count.textContent = 'Something failed to load';
+        list.innerHTML = '<div class="empty">The recipe app hit a loading error. Refresh once; if it still happens, check script.js in GitHub.</div>';
+      }
+      console.error(event.error || event.message);
+    });
+  </script>
 </body>
 </html>
